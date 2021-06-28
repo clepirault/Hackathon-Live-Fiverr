@@ -1,14 +1,11 @@
 import React from 'react';
-import PrimaryButton from './components/commons/PrimaryButton';
-import SecondaryButton from './components/commons/SecondaryButton';
-import MainRouter from './components/router/MainRouter';
+import logo from './live-fiverr-logo.png';
 
 function App() {
   return (
     <div className="App">
-      <MainRouter />
-      <PrimaryButton onClick={() => alert('OK!')}>OK</PrimaryButton>
-      <SecondaryButton onClick={() => alert('Cancel')}>Cancel</SecondaryButton>
+      <h1>Live Fiverr project</h1>
+      <img src={logo} alt="Logo" />
     </div>
   );
 }

@@ -7,13 +7,11 @@ function MainLayout({ children }) {
     <div className="MainLayout">
       <header>
         <Navigation>
-          <Link to="/">Accueil</Link>
-          <Link to="/products">Liste des produits</Link>
-          <Link to="/contact">Nous contacter</Link>
+          <Link to="/">Home</Link>
         </Navigation>
-        <main>{children}</main>
-        <footer>Copyright 2021</footer>
       </header>
+      <main>{children}</main>
+      <footer>Copyright 2021</footer>
     </div>
   );
 }

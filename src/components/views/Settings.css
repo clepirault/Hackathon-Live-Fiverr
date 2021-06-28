@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap');
+.settings {
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #414246;
+}
+
+.logo {
+  height: 3em;
+}
+
+.toggle {
+  border: 1px solid #363636;
+  border-radius: 5em;
+  display: flex;
+  align-items: center;
+}
+
+.settingsBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settingsTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settingsTopics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.detailTopic {
+  width: 20vw;
+  height: 50vh;
+  border-radius: 3em;
+  margin-bottom: 2em;
+  background-color: #ebebeb;
+}
+
+.settingsSubmit {
+  display: flex;
+  justify-content: center;
+}

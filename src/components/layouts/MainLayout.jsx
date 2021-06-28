@@ -1,17 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../commons/Navigation';
+import Header from '../commons/Header';
+import Footer from '../commons/Footer';
 
 function MainLayout({ children }) {
   return (
     <div className="MainLayout">
-      <header>
-        <Navigation>
-          <Link to="/">Home</Link>
-        </Navigation>
-      </header>
+      <Header />
       <main>{children}</main>
-      <footer>Copyright 2021</footer>
+      <Footer />
     </div>
   );
 }

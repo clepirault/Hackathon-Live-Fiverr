@@ -1,4 +1,4 @@
-const user = [
+const users = [
   {
     id: 0,
     firstname: 'Brad',
@@ -11,14 +11,6 @@ const user = [
     mentorScore: 4,
     rate: 12,
     photo: 'https://randomuser.me/api/portraits/men/75.jpg',
-    lives: {
-      id: 0,
-      interest: 'Music & Audio',
-      tags: ['Mixing & Mastering', 'Producers & Composers'],
-      date: 1625061600,
-      length: 2,
-      description: 'Learn how to produce your tracks with Ableton.',
-    },
   },
   // 1624888800 = timeStamp à convertir, 2 = durée en heure
   {
@@ -33,24 +25,6 @@ const user = [
     mentorScore: 4,
     rate: 8,
     photo: 'https://randomuser.me/api/portraits/women/43.jpg',
-    lives: [
-      {
-        id: 0,
-        interest: 'Digital Marketing',
-        tags: ['Social Media Marketing', 'SEO'],
-        date: 1625061600,
-        length: 2,
-        description: 'Learn SEO in 2 hours.',
-      },
-      {
-        id: 1,
-        interest: 'Digital Marketing',
-        tags: 'Social Media Marketing',
-        date: 1625077800,
-        length: 1,
-        description: 'A short speak about marketing on social media',
-      },
-    ],
   },
   {
     id: 2,
@@ -64,14 +38,6 @@ const user = [
     mentorScore: 5,
     rate: 9,
     photo: 'https://randomuser.me/api/portraits/men/97.jpg',
-    lives: {
-      id: 0,
-      interest: 'Graphics & Design',
-      tags: ['Logo Design', 'Brand Style Guides'],
-      date: 1625061600,
-      length: 2,
-      description: 'I will help you to design your perfect logo.',
-    },
   },
   {
     id: 3,
@@ -90,14 +56,6 @@ const user = [
     mentorScore: 4,
     rate: 12,
     photo: 'https://randomuser.me/api/portraits/women/58.jpg',
-    lives: {
-      id: 0,
-      interest: 'Programming & Tech',
-      tags: 'E-Commerce development',
-      date: 1625068800,
-      length: 2,
-      description: 'You will be able to launch your own E-Commerce!',
-    },
   },
   {
     id: 4,
@@ -111,14 +69,6 @@ const user = [
     mentorScore: 4,
     rate: 12,
     photo: 'https://randomuser.me/api/portraits/men/8.jpg',
-    lives: {
-      id: 0,
-      interest: 'Writing & Translation',
-      tags: ['Website Content', 'UX Writing'],
-      date: 1625072400,
-      length: 2,
-      description: 'I will help you to create a cool website content.',
-    },
   },
   {
     id: 5,
@@ -132,14 +82,6 @@ const user = [
     mentorScore: 5,
     rate: 9,
     photo: 'https://randomuser.me/api/portraits/women/26.jpg',
-    lives: {
-      id: 0,
-      interest: 'Writing & Translation',
-      tags: ['Articles & Blog Posts', 'Website Content'],
-      date: 1625072400,
-      length: 3,
-      description: 'Write your own articles!',
-    },
   },
   {
     id: 6,
@@ -153,14 +95,6 @@ const user = [
     mentorScore: 3,
     rate: 8,
     photo: 'https://randomuser.me/api/portraits/men/55.jpg',
-    lives: {
-      id: 0,
-      interest: 'Programming & Tech',
-      tags: 'WordPress',
-      date: 1624888800,
-      length: 2,
-      description: 'Become a real expert with WordPress.',
-    },
   },
   {
     id: 7,
@@ -174,14 +108,6 @@ const user = [
     mentorScore: 4,
     rate: 12,
     photo: 'https://randomuser.me/api/portraits/men/67.jpg',
-    lives: {
-      id: 0,
-      interest: 'Video & Animation',
-      tags: ['Video Editing', 'Short Video Ads'],
-      date: 1625077800,
-      length: 2,
-      description: 'Be able to do your own ads.',
-    },
   },
   {
     id: 8,
@@ -195,15 +121,7 @@ const user = [
     mentorScore: 4,
     rate: 13,
     photo: 'https://randomuser.me/api/portraits/men/28.jpg',
-    lives: {
-      id: 0,
-      interest: 'Graphics & Design',
-      tags: ['Brand Style Guides', 'Logo Design'],
-      date: 1625077800,
-      length: 2,
-      description: 'Give a real and powerfull identity to your brand.',
-    },
   },
 ];
 
-export default user;
+export default users;

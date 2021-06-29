@@ -188,7 +188,7 @@
   object-fit: contain;
 }
 .image-gallery-slide .image-gallery-description {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   bottom: 70px;
   color: #fff;
   left: 0;
@@ -427,8 +427,16 @@
 
 /*OVERIDE*/
 .image-gallery {
-  width: 70%;
-  height: 30%;
+  width: 800px;
+  border-radius: 2rem;
+}
+
+.image-gallery-image {
+  border-radius: 2rem;
+}
+
+.image-gallery-description {
+  font-size: 2rem;
 }
 
 .image-gallery-slide img {
@@ -438,14 +446,61 @@
   object-fit: cover;
   overflow: hidden;
   object-position: center center;
+  cursor: pointer;
 }
 
 .fullscreen .image-gallery-slide img {
   max-height: 100vh;
 }
 
-.CarouselDiv {
+.CarouselDiv,
+.today {
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.livesToday {
+  display: flex;
+  justify-content: space-around;
+}
+
+.live {
+  width: 10vw;
+  height: 30vh;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  margin: 2vh 2vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.9rem;
+}
+
+.titreLive {
+  font-weight: bold;
+  font-size: 1 rem;
+  align-self: center;
+}
+
+.hourLive {
+  align-self: center;
+}
+
+.tagLive {
+  border-radius: 2rem;
+  border: 1px solid gray;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: lightgray;
+  margin: 5px;
+}
+
+.tagLives {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -473,7 +473,7 @@
   border-radius: 1rem;
   border: 1px solid gray;
   margin: 2vh 2vw;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -494,13 +494,46 @@
   border-radius: 2rem;
   border: 1px solid gray;
   text-align: center;
-  padding: 5px 10px;
+  padding: 3px 8px;
   background-color: lightgray;
   margin: 5px;
+  font-size: 0.8rem;
 }
 
 .tagLives {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.livesearch {
+  border: 1px solid gray;
+  background-color: lightgray;
+  width: 50vw;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.searchArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchArea p {
+  margin: 5px 5px;
+}
+
+.tagLiveSearch {
+  border-radius: 2rem;
+  border: 1px solid gray;
+  text-align: center;
+  padding: 3px 8px;
+  background-color: lightgray;
+  font-size: 0.8rem;
+}
+
+.tagsSearch {
+  display: flex;
 }

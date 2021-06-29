@@ -43,7 +43,7 @@ const lives = [
     id: 2,
     userId: 1,
     interest: 'Digital Marketing',
-    tags: 'Social Media Marketing',
+    tags: ['Social Media Marketing'],
     date: dateTomorrow,
     length: 1,
     description: 'A short speak about marketing on social media',

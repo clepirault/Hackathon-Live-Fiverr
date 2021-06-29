@@ -22,16 +22,14 @@ const bgGradient = [
   'linear-gradient(315deg, #f2cf07 0%, #55d284 74%)',
 ];
 const Carousel = () => {
+  const [search, setSearch] = useState('');
   const [users, setUsers] = useState(usersArray);
-  console.log(users);
   const [livesNow, setLivesNow] = useState(
     livesArray.filter((live) => live.date <= timeNow)
   );
-  console.log(livesNow);
   const [livesToday, setLivesToday] = useState(
     livesArray.filter((live) => live.date.getDay() === timeNow.getDay())
   );
-  console.log(livesToday);
   const [livesTomorrow, setLivesTomorrow] = useState(
     livesArray.filter(
       (live) =>
@@ -39,7 +37,6 @@ const Carousel = () => {
         live.date.getHours() > timeNow.getHours()
     )
   );
-  console.log(livesTomorrow);
 
   const imagesLive = [
     {
@@ -90,6 +87,7 @@ const Carousel = () => {
           onClick={(e) => playVideo(e)}
         />
       </div>
+
       <div className="today">
         <h2>Live mentoring today !</h2>
         <div className="livesToday">
@@ -110,6 +108,30 @@ const Carousel = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="searchArea">
+        <label htmlFor="searchinput">
+          <input
+            type="text"
+            id="searchinput"
+            placeholder="Search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </label>
+        {livesArray.map((live) => (
+          <div className="livesearch">
+            <p className="titreLive">{live.interest}</p>
+            <div className="tagsSearch">
+              <p className="tagLiveSearch">{live.tags[0]}</p>
+              {live.tags[1] && <p className="tagLiveSearch">{live.tags[1]}</p>}
+            </div>
+
+            <p>{live.description}</p>
+          </div>
+        ))}
+        <p>{search}</p>
       </div>
     </div>
   );

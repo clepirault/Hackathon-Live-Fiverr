@@ -76,7 +76,7 @@ const Carousel = () => {
   };
 
   return (
-    <div>
+    <div className="Carousel">
       <div className="CarouselDiv">
         <h2>Live mentoring for you right now !</h2>
         <ImageGallery

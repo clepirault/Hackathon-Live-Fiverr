@@ -453,9 +453,32 @@
   max-height: 100vh;
 }
 
+.Carousel {
+  width: 85vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.Carousel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Carousel::-webkit-scrollbar-track {
+  background: #bbd6ca;
+  border-radius: 2rem;
+}
+
+.Carousel::-webkit-scrollbar-thumb {
+  background-color: #1dbf73;
+  border-radius: 20px;
+  border: 1px solid #00732e;
+}
+
 .CarouselDiv,
 .today {
-  width: 100vw;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -471,14 +494,14 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 80vw;
+  width: 80%;
   border: 1px solid gray;
   border-radius: 0.5rem;
   background-color: rgb(238, 238, 238);
 }
 
 .livesToday::-webkit-scrollbar {
-  width: 6px;
+  height: 8px;
 }
 
 .livesToday::-webkit-scrollbar-track {

@@ -5,8 +5,10 @@ import Footer from '../commons/Footer';
 function MainLayout({ children }) {
   return (
     <div className="MainLayout">
-      <Header />
-      <main>{children}</main>
+      <div className="layoutBody">
+        <Header />
+        <main>{children}</main>
+      </div>
       <Footer />
     </div>
   );

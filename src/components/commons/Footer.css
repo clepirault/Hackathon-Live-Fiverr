@@ -23,9 +23,9 @@ footer {
   margin-top: 1em;
 }
 
-
-.logoNetwork{
-  height:25px;
-padding-top:15px;
-padding-right:10px;
+.logoNetwork {
+  height: 25px;
+  padding-top: 15px;
+  padding-right: 10px;
+  cursor: pointer;
 }

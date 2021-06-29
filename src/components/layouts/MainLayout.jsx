@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../commons/Header';
 import Footer from '../commons/Footer';
+import './MainLayout.css';
 
 function MainLayout({ children }) {
   return (

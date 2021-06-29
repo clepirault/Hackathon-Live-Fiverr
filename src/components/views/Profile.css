@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+}
+
+.interet {
+  width: 30%;
+  height: 50px;
+  border: 1px solid black;
+}
+
+h3 {
+  text-decoration: underline;
+  color: rgb(255, 118, 064);
+}

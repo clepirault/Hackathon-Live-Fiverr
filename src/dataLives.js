@@ -43,7 +43,7 @@ const lives = [
     id: 2,
     userId: 1,
     interest: 'Digital Marketing',
-    tags: 'Social Media Marketing',
+    tags: ['Social Media Marketing'],
     date: dateTomorrow,
     length: 1,
     description: 'A short speak about marketing on social media',
@@ -88,7 +88,7 @@ const lives = [
     id: 7,
     userId: 6,
     interest: 'Programming & Tech',
-    tags: 'WordPress',
+    tags: ['WordPress'],
     date: dateTomorrow,
     length: 2,
     description: 'Become a real expert with WordPress.',
@@ -105,11 +105,11 @@ const lives = [
   {
     id: 9,
     userId: 8,
-    interest: 'Graphics & Design',
-    tags: ['Brand Style Guides', 'Logo Design'],
+    interest: 'Digital Marketing',
+    tags: ['Hackaton', 'Live Presentation'],
     date: dateTomorrow,
     length: 2,
-    description: 'Give a real and powerfull identity to your brand.',
+    description: 'Learn how to amaze your audience.',
   },
 ];
 export default lives;

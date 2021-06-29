@@ -460,30 +460,57 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2rem;
+  border-top: 2px solid #d0f7e6;
 }
 
 .livesToday {
+  align-items: stretch;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 80vw;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  background-color: rgb(238, 238, 238);
+}
+
+.livesToday::-webkit-scrollbar {
+  width: 6px;
+}
+
+.livesToday::-webkit-scrollbar-track {
+  background: #bbd6ca;
+  border-radius: 2rem;
+}
+
+.livesToday::-webkit-scrollbar-thumb {
+  background-color: #1dbf73;
+  border-radius: 20px;
+  border: 1px solid #00732e;
 }
 
 .live {
-  width: 10vw;
-  height: 30vh;
+  width: 200px;
+  height: 300px;
   border-radius: 1rem;
   border: 1px solid gray;
   margin: 2vh 2vw;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 .titreLive {
   font-weight: bold;
-  font-size: 1 rem;
+  font-size: 1.1rem;
   align-self: center;
+  filter: drop-shadow(2px 2px 3px white);
 }
 
 .hourLive {
@@ -498,6 +525,7 @@
   background-color: lightgray;
   margin: 5px;
   font-size: 0.8rem;
+  box-shadow: 1px 1px 3px rgb(85, 85, 85);
 }
 
 .tagLives {
@@ -508,30 +536,45 @@
 
 .livesearch {
   border: 1px solid gray;
-  background-color: lightgray;
+  background-color: rgb(247, 247, 247);
   width: 50vw;
-  border-radius: 2rem;
+  border-radius: 0.3rem;
   padding: 1rem;
   margin: 1rem;
 }
 
 .searchArea {
+  border-top: 2px solid #d0f7e6;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 25px;
 }
 
 .searchArea p {
   margin: 5px 5px;
 }
 
+#searchinput {
+  border-radius: 1rem;
+  background-color: rgb(233, 232, 232);
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  justify-self: flex-start;
+}
+
 .tagLiveSearch {
-  border-radius: 2rem;
+  border-radius: 1rem;
   border: 1px solid gray;
   text-align: center;
   padding: 3px 8px;
   background-color: lightgray;
   font-size: 0.8rem;
+  box-shadow: 1px 1px 3px rgb(85, 85, 85);
+}
+
+.liveTime {
+  text-align: right;
 }
 
 .tagsSearch {

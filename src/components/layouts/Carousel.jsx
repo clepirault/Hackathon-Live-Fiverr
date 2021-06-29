@@ -14,12 +14,16 @@ import abletonpic from '../images/liveAbleton.jpg';
 const timeNow = new Date();
 
 const bgGradient = [
-  'linear-gradient(to right, #4880EC, #019CAD)',
-  'linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%)',
-  'linear-gradient(315deg, #e899dc 0%, #d387ab 74%)',
+  'linear-gradient(315deg, #f6fba2 0%, #20ded3 74%)',
+  'linear-gradient(315deg, #68A0EC, #11ACBD)',
+  'linear-gradient(147deg, #f7accf 0%, #ff1053 74%)',
+  'linear-gradient(315deg, #f9484a 0%, #fbd72b 74%)',
   'linear-gradient(315deg, #00b712 0%, #5aff15 74%)',
   'linear-gradient(315deg, #f39f86 0%, #f9d976 74%)',
   'linear-gradient(315deg, #f2cf07 0%, #55d284 74%)',
+  'linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)',
+  'linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%)',
+  'linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%)',
 ];
 const Carousel = () => {
   const [search, setSearch] = useState('');
@@ -74,7 +78,7 @@ const Carousel = () => {
   return (
     <div>
       <div className="CarouselDiv">
-        <h2>Live mentoring right now !</h2>
+        <h2>Live mentoring for you right now !</h2>
         <ImageGallery
           items={imagesLive}
           showThumbnails={false}
@@ -89,7 +93,7 @@ const Carousel = () => {
       </div>
 
       <div className="today">
-        <h2>Live mentoring today !</h2>
+        <h2>All live mentoring today !</h2>
         <div className="livesToday">
           {livesToday.map((live, i) => (
             <div
@@ -111,6 +115,7 @@ const Carousel = () => {
       </div>
 
       <div className="searchArea">
+        <h2>Find a live !</h2>
         <label htmlFor="searchinput">
           <input
             type="text"
@@ -120,18 +125,43 @@ const Carousel = () => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </label>
-        {livesArray.map((live) => (
-          <div className="livesearch">
-            <p className="titreLive">{live.interest}</p>
-            <div className="tagsSearch">
-              <p className="tagLiveSearch">{live.tags[0]}</p>
-              {live.tags[1] && <p className="tagLiveSearch">{live.tags[1]}</p>}
+        {livesArray
+          .filter(
+            (live) =>
+              !search ||
+              live.tags[0].toLowerCase().includes(search.toLowerCase()) ||
+              (live.tags[1] &&
+                live.tags[1].toLowerCase().includes(search.toLowerCase())) ||
+              live.description
+                .toLowerCase()
+                .includes(
+                  search.toLowerCase() ||
+                    live.interest.toLowerCase().includes(search.toLowerCase())
+                )
+          )
+          .map((live, index) => (
+            <div
+              className="livesearch"
+              style={{
+                backgroundImage: bgGradient[index],
+              }}
+            >
+              <p className="titreLive">{live.interest}</p>
+              <div className="tagsSearch">
+                <p className="tagLiveSearch">{live.tags[0]}</p>
+                {live.tags[1] && (
+                  <p className="tagLiveSearch">{live.tags[1]}</p>
+                )}
+              </div>
+              <p>{live.description}</p>
+              <p className="liveTime">
+                {live.date.getDay() === new Date().getDay()
+                  ? 'Today @ '
+                  : 'Tomorrow @ '}
+                {live.date.getHours()}:00
+              </p>
             </div>
-
-            <p>{live.description}</p>
-          </div>
-        ))}
-        <p>{search}</p>
+          ))}
       </div>
     </div>
   );

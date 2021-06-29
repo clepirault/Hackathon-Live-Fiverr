@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout';
 function Home() {
   return (
     <MainLayout>
-      <div>Home</div>
+      <div> Home</div>
     </MainLayout>
   );
 }

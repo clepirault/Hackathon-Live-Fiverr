@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+  margin-top: 5vw;
+}
+
+.navbarLink a:link,
+.navbarLink a:visited {
+  text-decoration: none;
+  color: #d0f7e6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbarLink {
+  padding-bottom: 3vw;
+  font-size: 1.5em;
+}

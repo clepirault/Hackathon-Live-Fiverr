@@ -1,9 +1,28 @@
 footer {
   border-top: 2px solid #d1d1d1;
-  padding-top: 1em;
+  padding-top: 0.2em;
   display: flex;
 }
 
+.credits {
+  margin-top: 0.5vw;
+  display: flex;
+  margin-left: 35%;
+  margin-right: auto;
+  margin-bottom: 2vw;
+}
 .logo {
-  height: 3em;
+  height: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copyright {
+  margin-top: unset;
+  margin-top: 1.12em;
+}
+.logoNetwork {
+  margin-top: 1.2vw;
+  height: 1.5em;
+  margin-right: 2vw;
 }

@@ -6,8 +6,10 @@ import './MainLayout.css';
 function MainLayout({ children }) {
   return (
     <div className="MainLayout">
-      <div className="layoutBody">
-        <Header />
+      <div className="bodyLayout">
+        <div className="header">
+          <Header />
+        </div>
         <main>{children}</main>
       </div>
       <Footer />

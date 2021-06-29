@@ -2,12 +2,13 @@ footer {
   border-top: 2px solid #d1d1d1;
   padding-top: 0.2em;
   display: flex;
+  height:4vw;
 }
 
 .credits {
-  margin-top: 0.5vw;
+  margin-top: 0.1vw;
   display: flex;
-  margin-left: 35%;
+  margin-left: 37%;
   margin-right: auto;
   margin-bottom: 2vw;
 }
@@ -19,7 +20,7 @@ footer {
 
 .copyright {
   margin-top: unset;
-  margin-top: 1.12em;
+  margin-top: 1em;
 }
 .logoNetwork {
   margin-top: 1.2vw;

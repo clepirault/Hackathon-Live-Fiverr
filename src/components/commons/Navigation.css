@@ -1,6 +1,6 @@
 ul {
   list-style: none;
-  margin-top: 5vw;
+  margin-top: 7vw;
 }
 
 .navbarLink a:link,
@@ -12,6 +12,6 @@ ul {
 }
 
 .navbarLink {
-  padding-bottom: 3vw;
+  padding-bottom: 4vw;
   font-size: 1.5em;
 }

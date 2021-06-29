@@ -1,0 +1,9 @@
+footer {
+  border-top: 2px solid #d1d1d1;
+  padding-top: 1em;
+  display: flex;
+}
+
+.logo {
+  height: 3em;
+}

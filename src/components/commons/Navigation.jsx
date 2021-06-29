@@ -6,7 +6,7 @@ function Navigation() {
     <nav>
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/home">Back home</Link>
         </li>
         <li>
           <Link to="/profile">Profile</Link>

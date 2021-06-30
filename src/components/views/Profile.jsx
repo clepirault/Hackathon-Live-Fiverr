@@ -5,7 +5,7 @@ import './Profile.css';
 
 function Profile() {
   return (
-    <div>
+    <div className="profilscroll">
       <div>Profile</div>
       <MainLayout>
         <h1>Profile</h1>

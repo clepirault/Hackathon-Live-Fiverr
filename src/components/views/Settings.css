@@ -41,7 +41,7 @@
   background-color: #ebebeb;
 }
 
-.detailTopic:hover{
+.detailTopic:hover {
   filter: opacity(0.5);
 }
 
@@ -49,4 +49,14 @@
   width: 100%;
   border-top-left-radius: 3em;
   border-top-right-radius: 3em;
+}
+
+.detailTopicSelected {
+  border: 2px solid greenyellow;
+  width: 20vw;
+  height: 40vh;
+  border-radius: 3em;
+  margin-bottom: 2em;
+  background-color: #ebebeb;
+  box-shadow: 2px 2px 2px grey;
 }

@@ -19,8 +19,8 @@ function Profile() {
               alt="music"
             />
           </div>
-          <div className="interet">
-            <p className="titre">Video & Animation</p>
+          <div className="noInteret">
+            <p className="titre0">Video & Animation</p>
             <img
               src="https://fiverr-res.cloudinary.com/w_iw_div_3.0,q_auto,f_auto/general_assets/categories/assets/f3/desktop_video_and_animation_live_action_videos_new.jpg"
               alt="video"
@@ -34,8 +34,8 @@ function Profile() {
               alt="Design"
             />
           </div>
-          <div className="noInteret">
-            <p className="titre0">Digital Marketing</p>
+          <div className="interet">
+            <p className="titre">Digital Marketing</p>
             <img
               src="https://fiverr-res.cloudinary.com/w_iw_div_3.0,q_auto,f_auto/general_assets/categories/assets/f3/desktop_digital_marketing_marketing_strategy2.jpg"
               alt="Digital"

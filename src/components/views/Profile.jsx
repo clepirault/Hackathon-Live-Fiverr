@@ -4,8 +4,6 @@ import MainLayout from '../layouts/MainLayout';
 import './Profile.css';
 
 function Profile() {
-  const isMentor = localStorage.getItem('is mentor');
-  // const [selected, setSelected] = useState(false);
   return (
     <div>
       <MainLayout>
@@ -76,7 +74,6 @@ function Profile() {
           <p>
             {' '}
             Am I a mentor ? <br />
-            <p>{isMentor ? 'Vous etes mentor' : 'vous etes pas mentor'}</p>
             <label htmlFor="yes">
               <input type="radio" value="yes" name="bool" /> Yes
             </label>

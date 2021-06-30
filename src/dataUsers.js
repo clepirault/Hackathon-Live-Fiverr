@@ -62,7 +62,7 @@ const users = [
     firstname: 'Duane',
     lastname: 'Cox',
     age: 37,
-    interest: 'Writing & Translation',
+    interest: ['Writing & Translation'],
     tags: ['Website Content', 'Translation'],
     online: false,
     mentor: true,

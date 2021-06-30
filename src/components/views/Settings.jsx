@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import DetailTopic from '../commons/DetailTopic';
 import ToggleButton from '../commons/ToggleButton';

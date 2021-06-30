@@ -75,7 +75,7 @@ function Settings() {
       </div>
       <div className="settingsSubmit">
         <Link to="/home">
-          <button type="button">Valider</button>
+          <button type="button">Go!</button>
         </Link>
       </div>
     </div>

@@ -6,82 +6,7 @@ import './Chat.css';
 
 const chat = [
   {
-    mentor: 'doibat568',
-    msg: [
-      {
-        id: 0,
-        from: 'user',
-        message:
-          'Hello, i liked your live training about how to UseState. I would like to have a private lesson about Hooks in React? Are you available for this kind of mentoring?',
-        to: 'mentor',
-      },
-      {
-        id: 1,
-        from: 'mentor',
-        message:
-          'Hello, actually i have some times this week. How much time do you need for this lesson?',
-        to: 'user',
-      },
-      {
-        id: 2,
-        from: 'user',
-        message: 'I would like to have one hour lesson, wednesday afternoon',
-        to: 'mentor',
-      },
-      {
-        id: 3,
-        from: 'mentor',
-        message:
-          'I will send you a request wednesday, the lesson will cost 15 euros and will start at 2pm',
-        to: 'user',
-      },
-      {
-        id: 4,
-        from: 'user',
-        message: 'Perfect for me, see you tomorrow',
-        to: 'mentor',
-      },
-    ],
-  },
-  {
-    mentor: 'Hourubi44',
-    msg: [
-      {
-        id: 0,
-        from: 'user',
-        message:
-          'Good morning, i am curious about wichcraft, can you explain me basics during one hour?',
-        to: 'mentor',
-      },
-      {
-        id: 1,
-        from: 'mentor',
-        message:
-          'Hello, well I can explain you theories about it- it would cost 5euros',
-        to: 'user',
-      },
-      {
-        id: 2,
-        from: 'user',
-        message: 'Ok, this is good for me , my availabilty are this week-end',
-        to: 'mentor',
-      },
-      {
-        id: 3,
-        from: 'mentor',
-        message: 'this week-end ids ok for me, saturday 3 pm',
-        to: 'user',
-      },
-      {
-        id: 4,
-        from: 'user',
-        message: 'Perfect for me, see you saturday',
-        to: 'mentor',
-      },
-    ],
-  },
-  {
-    mentor: 'juio36',
+    mentor: 'Jacob Weaver',
     msg: [
       {
         id: 0,
@@ -119,7 +44,82 @@ const chat = [
     ],
   },
   {
-    mentor: 'LeProf58',
+    mentor: 'Jessica Elb',
+    msg: [
+      {
+        id: 0,
+        from: 'user',
+        message:
+          'Good morning, i am curious about wichcraft, can you explain me basics during one hour?',
+        to: 'mentor',
+      },
+      {
+        id: 1,
+        from: 'mentor',
+        message:
+          'Hello, well I can explain you theories about it- it would cost 5euros',
+        to: 'user',
+      },
+      {
+        id: 2,
+        from: 'user',
+        message: 'Ok, this is good for me , my availabilty are this week-end',
+        to: 'mentor',
+      },
+      {
+        id: 3,
+        from: 'mentor',
+        message: 'this week-end ids ok for me, saturday 3 pm',
+        to: 'user',
+      },
+      {
+        id: 4,
+        from: 'user',
+        message: 'Perfect for me, see you saturday',
+        to: 'mentor',
+      },
+    ],
+  },
+  {
+    mentor: 'José Perrez',
+    msg: [
+      {
+        id: 0,
+        from: 'user',
+        message:
+          'Hello, I am curious about sewing skills, can you teach me how to sew a button',
+        to: 'mentor',
+      },
+      {
+        id: 1,
+        from: 'mentor',
+        message:
+          'Hello, actually i can do it in a half a hour, so it would cost 7 euros',
+        to: 'user',
+      },
+      {
+        id: 2,
+        from: 'user',
+        message:
+          'That sounds cool!! So tomorrow at 9 am is ok, but it is up to you',
+        to: 'mentor',
+      },
+      {
+        id: 3,
+        from: 'mentor',
+        message: 'okey, then see you tomorrow, i will send a request',
+        to: 'user',
+      },
+      {
+        id: 4,
+        from: 'user',
+        message: 'Thanx see U',
+        to: 'mentor',
+      },
+    ],
+  },
+  {
+    mentor: 'Mathilde Lelac',
     msg: [
       {
         id: 0,
@@ -159,21 +159,41 @@ const chat = [
 
 function MessageChat() {
   const [currentMentor, setCurentMentor] = useState('doibat568');
-  const [messages, setMessages] = useState([]);
-  const [userInput, setUserInput] = useState('');
+  const [userInput, setUserInput] = useState();
   const [array, setArray] = useState(chat);
+  const [messages, setMessages] = useState(array[0].msg);
+  const [visibleButton, setVisibleButton] = useState(false);
 
   // eslint-disable-next-line no-unused-vars
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
+    const temp = [
+      ...messages,
+      {
+        id: 5,
+        from: 'user',
+        message: userInput,
+        to: 'mentor',
+      },
+    ];
+    setMessages(temp);
     setUserInput('');
-    setMessages([...messages, userInput]);
+    setTimeout(() => {
+      setMessages([
+        ...temp,
+        {
+          id: 5,
+          from: 'mentor',
+          message: 'sure buddy',
+          to: 'user',
+        },
+      ]);
+      setTimeout(() => {
+        setVisibleButton(true);
+      }, 2000);
+    }, 3000);
   };
-
+  console.log(currentMentor);
   // const allMessages = chat.msg.map((text) => [text.message]);
-
-  // eslint-disable-next-line no-console
-  console.log(chat);
 
   return (
     <div>
@@ -190,21 +210,35 @@ function MessageChat() {
             ))}
           </div>
           <div className="chatContent">
-            {array[0].msg.map((element) => (
+            {messages.map((element) => (
               <li
-              /* className={from === 'user' ? 'textChatRight' : 'textChatLeft'} */
+                className={
+                  element.from === 'user' ? 'textChatRight' : 'textChatLeft'
+                }
               >
                 {element.message}
               </li>
             ))}
-            <form onSubmit={handleSubmit} className="chatText">
+            {visibleButton ? (
+              <button type="button" className="offerBt">
+                Accept the offer (15€/h) and GO LIVE
+              </button>
+            ) : (
+              ''
+            )}
+
+            <form className="chatText">
               <input
                 className="chatInput"
                 type="text"
                 value={userInput}
                 onChange={(event) => setUserInput(event.target.value)}
               />
-              <button className="chatButton" type="button">
+              <button
+                className="chatButton"
+                type="button"
+                onClick={handleSubmit}
+              >
                 Send
               </button>
             </form>

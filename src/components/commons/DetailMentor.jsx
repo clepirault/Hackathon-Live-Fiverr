@@ -6,6 +6,7 @@ function DetailMentor(props) {
   const { mentor, setCurentMentor, setArray, chat } = props;
   const handleClick = (s) => {
     setCurentMentor(s);
+    console.log(s);
     setArray(chat.filter((element) => element.mentor === s));
   };
   return (

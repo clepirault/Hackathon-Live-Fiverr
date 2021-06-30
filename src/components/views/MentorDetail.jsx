@@ -5,8 +5,8 @@ function MentorDetail(props) {
   return (
     <div className="mentorCard">
       <ul className="textCenter">
-        <li>{`${firstname} ${lastname}`}</li>
-        <img src={photo} alt={lastname} />
+        <li className="formC">{`${firstname} ${lastname}`}</li>
+        <img src={photo} alt={lastname} className="picture" />
         <li>
           {interest[0]}
           <br />
@@ -15,8 +15,11 @@ function MentorDetail(props) {
           {interest[2]}
         </li>
       </ul>
-      <div className="buttonMentor">
-        <button type="button">{`Contact ${firstname}`}</button>
+      <div className="buttonMento">
+        <button
+          type="button"
+          className="buttonMentor"
+        >{`Contact ${firstname}`}</button>
       </div>
     </div>
   );

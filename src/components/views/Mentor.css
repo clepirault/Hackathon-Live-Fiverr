@@ -1,5 +1,6 @@
 .mentorCard {
   margin-top: -3.5em;
+  padding-bottom:2vw;
 }
 .mentor {
   display: flex;
@@ -8,7 +9,7 @@
   margin-top: 3.5em;
   width: 85vw;
   overflow-y: scroll;
-  overflow-x:hidden;
+  overflow-x: hidden;
   height: 90vh;
   margin-bottom: 65px;
 }
@@ -31,5 +32,15 @@
 
 .buttonMentor {
   display: flex;
-  margin-left: 4vw;
+  margin-left: 6vw;
+  border-radius: 25px;
+}
+
+.formC {
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+.picture {
+  margin-left: 15px;
 }

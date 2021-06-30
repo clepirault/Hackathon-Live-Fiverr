@@ -1,0 +1,23 @@
+.wrapChat{
+    display: flex;
+}
+
+.chatContent li{
+    list-style: none;
+    padding: 2%;
+}
+
+.chatInput{
+    width: 100vh;
+height: 30vh;
+margin: 2%;
+}
+.blocBG{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
